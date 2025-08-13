@@ -26,6 +26,24 @@ export default function RootLayout({ children }) {
             >
               About
             </Link>
+            <Link
+              href="/contact"
+              className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors"
+            >
+              Contact
+            </Link>
+            <Link
+              href="/privacy-policy"
+              className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors"
+            >
+              Terms of Service
+            </Link>
           </div>
         </nav>
 

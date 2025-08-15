@@ -10,45 +10,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+      <body className="bg-gray-50 text-gray-800 min-h-screen flex flex-col overflow-x-hidden">
+
         {/* Navbar */}
         <nav className="bg-white shadow-md py-4 px-8 flex items-center justify-between">
-          <div className="flex items-center space-x-6">
-            <Link
-              href="/"
-              className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors"
-            >
-              Contact
-            </Link>
-            <Link
-              href="/privacy-policy"
-              className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms"
-              className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors"
-            >
-              Terms of Service
-            </Link>
+          <div className="flex flex-wrap items-center gap-6">
+            <Link href="/" className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors">Home</Link>
+            <Link href="/about" className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors">About</Link>
+            <Link href="/contact" className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors">Contact</Link>
+            <Link href="/privacy-policy" className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-gray-800 font-semibold text-lg hover:text-blue-600 transition-colors">Terms of Service</Link>
           </div>
         </nav>
 
         {/* Page content */}
-        <main className="flex-1 container mx-auto px-6 py-10">
+        <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-12">
           {children}
         </main>
 

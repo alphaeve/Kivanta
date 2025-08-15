@@ -1,15 +1,15 @@
-// import { initializeApp } from "firebase/app";
-// import { getFirestore } from "firebase/firestore";
+// lib/firebase.js
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
-// const firebaseConfig = {
-//     apiKey: "AIzaSyCkTqJD9U0o8Iw-LHInlmM6KfFT25hD-R4",
-//     authDomain: "health-education-101aa.firebaseapp.com",
-//     projectId: "health-education-101aa",
-//     storageBucket: "health-education-101aa.firebasestorage.app",
-//     messagingSenderId: "543713875157",
-//     appId: "1:543713875157:web:6c1d69cb0fc79e8e943e5c",
-//     measurementId: "G-NHCL2315CR"
-//   };
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+};
 
-// const app = initializeApp(firebaseConfig);
-// export const db = getFirestore(app);
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
